@@ -17,9 +17,12 @@ function setBlockBgColor(){
             bgClass="past";
         }else if ($(value).attr('data-hour') > moment().format('HH')){
             bgClass="future";
+
+            console.log("future"); 
         }else if ($(value).attr('data-hour') == moment().format('HH')){
             bgClass="present";
-        }        
+        }    
+     
         $(value).find("textarea").addClass(bgClass);
     });
 }
